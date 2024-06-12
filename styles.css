@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+.game-container {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    border: 2px solid #333;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.hello-kitty {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background: url('hello-kitty.png') no-repeat center center / cover;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    width: 30px;
+    height: 50px;
+    background-color: #333;
+    animation: moveObstacle 1.5s infinite linear;
+}
+
+@keyframes moveObstacle {
+    0% { right: -30px; }
+    100% { right: 100%; }
+}
+
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 100px; }
+    100% { bottom: 0; }
+}
